@@ -1,0 +1,5 @@
+# Containerlab Artifacts Folder
+clab-*/
+
+# License Files
+*.lic
