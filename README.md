@@ -34,7 +34,7 @@ In this architecture:
 | **Next-Hop Resolution** | Direct to Remote VTEP Tunnel | Direct to Remote VTEP Tunnel | Two-Stage via SBD Bridge Table |
 | **Inner Wire Payload** | Raw IPv4 / Direct L3 Payload | Raw IPv4 / Direct L3 Payload | Full Ethernet Frame (DMAC=Router MAC) |
 | **Multicast Support (OISM)** | Unsupported | Unsupported | Mandatory for RFC 9251 OISM |
-| **Target Use-Case** | Pure Nokia / Lowest BGP Prefix Count | **Multi-Vendor / Hyperscale IP-VRFs** | OISM Multicast & Legacy ASICs |
+| **Target Use-Case** | Pure Nokia / Lowest BGP Prefix Count | Multi-Vendor / Hyperscale IP-VRFs | OISM Multicast & Legacy ASICs |
 
 ---
 
