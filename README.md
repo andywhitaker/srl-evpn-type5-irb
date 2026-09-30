@@ -32,7 +32,8 @@ In this architecture:
 | **Host Route Carrier** | EVPN Type-2 MAC-IP | **EVPN Type-5 IP Prefix (/32)** | **EVPN Type-5 IP Prefix (/32)** via SBD |
 | **Tenant Routing Table Type** | `bgp-evpn-ifl-host` | `bgp-evpn` | `bgp-evpn-iff` |
 | **Next-Hop Resolution** | Direct to Remote VTEP Tunnel | Direct to Remote VTEP Tunnel | Two-Stage via SBD Bridge Table |
-| **Inner Wire Payload** | Raw IPv4 / Direct L3 Payload | Raw IPv4 / Direct L3 Payload | Full Ethernet Frame (DMAC=Router MAC) |
+| **Wire Encapsulation (RFC 7348)** | Full Ethernet Frame (DMAC=Router MAC) | Full Ethernet Frame (DMAC=Router MAC) | Full Ethernet Frame (DMAC=Router MAC) |
+| **Egress Datapath Pipeline** | Direct IP-VRF Termination | Direct IP-VRF Termination | Two-Stage via SBD Bridge Table |
 | **Multicast Support (OISM)** | Unsupported | Unsupported | Mandatory for RFC 9251 OISM |
 | **Target Use-Case** | Pure Nokia / Lowest BGP Prefix Count | Multi-Vendor / Hyperscale IP-VRFs | OISM Multicast & Legacy ASICs |
 
